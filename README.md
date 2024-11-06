@@ -46,6 +46,9 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+# Migrate prisma
+$ npx prisma migrate dev
 ```
 
 ## Run tests
