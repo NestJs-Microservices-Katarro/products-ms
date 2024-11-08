@@ -10,17 +10,16 @@ async function bootstrap() {
     {
       transport: Transport.TCP,
       options: {
-        port: envs.port
-      }
-    }
+        port: envs.port,
+      },
+    },
   );
-
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
-      forbidNonWhitelisted: true
-    })
-  )
+      forbidNonWhitelisted: true,
+    }),
+  );
 
   await app.listen();
   Logger.log(`Products Microservices Running on Port: ${envs.port}`);
